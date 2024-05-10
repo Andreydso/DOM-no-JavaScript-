@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário e DOM</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 280px;
+        }
+        form > * {
+            padding: 5px;
+        }
+        .invalido {
+            color: red;
+        }
+        input[type="checkbox"].invalido + label {
+            color: red;
+        }
+        * {
+            font-family: 'Popins', sans-serif;  
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário simples</h1>
+    <form id="cadastro">
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" name="usuario">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+
+        <label for="repetesenha">Repetir senha:</label>
+        <input type="password" id="repetesenha" name="repetesenha">
+        
+        <label for="cidade">Cidade:</label>
+        <select name="cidade" id="cidade">
+            <option selected>-- selecione --</option>
+            <option value="1">Mongaguá</option>
+            <option value="2">Praia Grande</option>
+            <option value="3">Itanhaém</option>
+        </select>
+        
+        <div>
+            <input type="checkbox" name="deacordo" id="deacordo">
+            <label for="deacordo">Concordo com os termos de uso </label>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
